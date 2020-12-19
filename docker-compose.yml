@@ -1,0 +1,14 @@
+version: '3'
+services:
+  cdk:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: template-vpc-cdk
+    volumes:
+      - aws_settings:/root/.aws
+      - .:/root/app
+    tty: true
+volumes:
+  aws_settings:
+    driver: local

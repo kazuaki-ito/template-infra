@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
-    container_name: template-vpc-cdk
+    container_name: template-infra-cdk
     volumes:
       - aws_settings:/root/.aws
       - .:/root/app

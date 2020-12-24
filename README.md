@@ -44,3 +44,23 @@ docker-compose ps
 # コンテナのbashを起動
 docker-compose exec cdk bash
 ```
+
+## デプロイ
+
+※　コンテナのbashにて
+
+```shell
+cdk deploy --all
+```
+
+## その他
+
+### bastionへの接続
+
+SessionManagerで接続する
+
+```
+aws ssm start-session --target ${i-xxxxxというインスタンス名}  
+```
+参考：
+https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/session-manager.html
